@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.try1.Try.security.service;
 
 import com.try1.Try.security.enums.RolNombre;
@@ -24,5 +20,9 @@ public class RolService {
 
     public void save(Rol rol){
         rolRepository.save(rol);
-    }   
+    }
+    
+    public boolean rolExists(Integer id){
+        return rolRepository.existsById(id);
+    }
 }

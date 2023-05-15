@@ -32,5 +32,10 @@ public class AboutService implements IAboutService {
     public void save(About a) {
         aboutRep.save(a);
     }
+
+    @Override
+    public boolean aboutExists(Integer id) {
+        return aboutRep.existsById(id);
+    }
     
 }
