@@ -11,9 +11,11 @@ com\try1\Try\security\dto\LoginUsuario.class
 com\try1\Try\service\IAboutService.class
 com\try1\Try\controller\AboutController.class
 com\try1\Try\model\About.class
+com\try1\Try\util\CreateRoles.class
 com\try1\Try\security\service\UsuarioService.class
 com\try1\Try\service\SkillService.class
 com\try1\Try\security\jwt\JwtTokenFilter.class
+com\try1\Try\util\CrearAbout.class
 com\try1\Try\security\dto\JwtDto.class
 com\try1\Try\model\Skill.class
 com\try1\Try\security\repository\UsuarioRepository.class
