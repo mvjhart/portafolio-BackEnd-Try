@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app")
 @RequestMapping("/auth")
 public class AuthController {
 
@@ -68,7 +68,7 @@ public class AuthController {
         return new ResponseEntity(new Mensaje("usuario guardado"), HttpStatus.CREATED);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200/login")
+    @CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app/login")
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())

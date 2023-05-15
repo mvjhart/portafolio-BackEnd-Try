@@ -16,34 +16,34 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app")
 @RequestMapping("/proyectos")
 public class ProyectoController {
 
     @Autowired
     IProyectoService proServ;
 
-    @CrossOrigin(origins = "http://localhost:4200/proyectos")
+    @CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app/proyectos")
     @GetMapping("/lista")
     @ResponseBody   
     public List<Proyecto> verProyectos(){   
         return proServ.verProyectos();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200/proyectos")    
+    @CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app/proyectos")    
     @PostMapping("/agregar")
     public void agregarProyecto(@RequestBody Proyecto p){
         proServ.agregarProyecto(p);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200/proyectos")       
+    @CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app/proyectos")       
     @DeleteMapping ("/borrar/{id}")
     public void borrarProyecto(@PathVariable Integer id){
         
         proServ.borrarProyecto(id);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200/proyectos")   
+    @CrossOrigin(origins = "https://portafolio-frontend-mariani.web.app/proyectos")   
     @PutMapping("/update/{id}")
     public void updateProyecto(@PathVariable Integer id, @RequestBody Proyecto p){ 
         proServ.updateProyecto(id,p);
